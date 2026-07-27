@@ -8,9 +8,25 @@ O projeto une conceitos de **Redes de Computadores**, **Análise de Dados** e **
 
 ---
 
+## 🌐 Contexto do Projeto
+
+Redes de computadores geram grandes volumes de dados a cada comunicação realizada entre dispositivos.
+
+Esses registros podem revelar informações importantes sobre o funcionamento de uma infraestrutura, permitindo analisar padrões de utilização, características do tráfego e possíveis alterações fora do comportamento esperado.
+
+O NetInsight nasce a partir da seguinte pergunta:
+
+> **É possível identificar padrões de comportamento de rede que indiquem tráfego normal ou uma possível ameaça?**
+
+Essa pergunta é relevante porque a análise de comportamento é uma das formas utilizadas para compreender ambientes de rede. Mudanças inesperadas podem indicar problemas de desempenho, falhas de configuração ou atividades suspeitas que precisam ser investigadas.
+
+O objetivo do projeto não é criar uma ferramenta completa de segurança, mas desenvolver uma análise exploratória de dados de rede, aplicando conceitos de engenharia de dados, redes de computadores e desenvolvimento de software.
+
+---
+
 ## 🎯 Objetivo
 
-Construir uma plataforma capaz de analisar registros de comunicação de rede, identificando padrões, métricas e características do tráfego através de técnicas de exploração e visualização de dados.
+Desenvolver uma plataforma de análise de dados capaz de transformar registros de tráfego de rede em informações visuais e indicadores, permitindo explorar padrões de comunicação e compreender diferenças entre comportamentos normais e anômalos.
 
 Durante o desenvolvimento serão explorados conceitos como:
 
@@ -19,22 +35,27 @@ Durante o desenvolvimento serão explorados conceitos como:
 - análise de tráfego;
 - estatística aplicada;
 - visualização de dados;
-- desenvolvimento de APIs.
+- desenvolvimento backend.
 
 ---
 
 ## 🗂️ Base de Dados
 
-O projeto utilizará inicialmente a base pública **UNSW-NB15**, criada para pesquisas relacionadas à análise de tráfego de rede.
+O projeto utilizará inicialmente a base pública **UNSW-NB15**, criada para pesquisas acadêmicas relacionadas à análise de tráfego de rede e detecção de intrusões.
 
-A base contém registros de comunicação contendo informações como:
+O dataset contém registros de comunicação de rede coletados em ambiente controlado, incluindo tráfego considerado normal e diferentes categorias de ataques.
+
+A base possui informações como:
 
 - protocolo utilizado;
-- serviço;
+- serviço acessado;
 - duração da conexão;
 - quantidade de pacotes;
 - volume de dados transferidos;
-- características do tráfego.
+- características da comunicação;
+- classificação do tráfego.
+
+Esses dados permitirão explorar padrões de comportamento e analisar quais características podem estar relacionadas a diferentes tipos de tráfego.
 
 ---
 
@@ -54,10 +75,11 @@ A base contém registros de comunicação contendo informações como:
 - Matplotlib
 - Seaborn
 
-### Ambiente
+### Ambiente e Versionamento
 
 - Jupyter Notebook
-- Git/GitHub
+- Git
+- GitHub
 
 ### Backend (futuro)
 
@@ -65,26 +87,52 @@ A base contém registros de comunicação contendo informações como:
 
 ---
 
+## 🗂️ Estrutura do Projeto
+
+```text
+NetInsight/
+│
+├── data/
+│   └── Dados brutos e dados tratados
+│
+├── notebooks/
+│   └── Exploração e análises dos dados
+│
+├── reports/
+│   └── Gráficos, resultados e relatórios
+│
+├── src/
+│   └── Código Python reutilizável
+│
+├── README.md
+└── requirements.txt
+```
+
+---
+
 ## 🧠 Conceitos estudados
 
-Durante o desenvolvimento do projeto serão aplicados conhecimentos de:
-
-### Redes
+### Redes de Computadores
 
 - Modelo TCP/IP
-- Endereçamento IP
 - Protocolos de comunicação
+- Endereçamento IP
 - Portas e serviços
-- Tráfego de rede
-- Métricas de desempenho
+- Características do tráfego de rede
 
-### Dados
+### Análise de Dados
 
 - Exploração de dados
 - Limpeza e tratamento
-- Análise estatística
-- Visualização
-- Interpretação de padrões
+- Estatística aplicada
+- Visualização de informações
+- Identificação de padrões
+
+### Desenvolvimento
+
+- Organização de projetos Python
+- Estruturação de aplicações
+- Criação de APIs
 
 ---
 
@@ -94,30 +142,27 @@ Durante o desenvolvimento do projeto serão aplicados conhecimentos de:
 
 - [x] Configuração do ambiente Python
 - [x] Estrutura inicial do projeto
-- [ ] Importação da base UNSW-NB15
-- [ ] Análise inicial das variáveis
+- [ ] Importação e análise da base UNSW-NB15
 
 ### Fase 2 — Análise de tráfego
 
 - [ ] Tratamento dos dados
-- [ ] Criação de métricas
-- [ ] Visualizações
+- [ ] Criação de métricas e visualizações
 - [ ] Identificação de padrões
 
-### Fase 3 — Backend
+### Fase 3 — Aplicação
 
-- [ ] Organização da aplicação
-- [ ] Criação da API Flask
-- [ ] Disponibilização das análises
-
-### Fase 4 — Dashboard
-
-- [ ] Interface visual
-- [ ] Gráficos interativos
-- [ ] Apresentação dos indicadores
+- [ ] Desenvolvimento da API
+- [ ] Construção do dashboard
 
 ---
 
 ## 📚 Objetivo de aprendizado
 
-Mais do que construir uma aplicação, o NetInsight tem como objetivo desenvolver conhecimento prático na integração entre redes de computadores, análise de dados e desenvolvimento de software.
+O NetInsight tem como objetivo desenvolver conhecimento prático na integração entre:
+
+- Redes de Computadores;
+- Análise de Dados;
+- Desenvolvimento Backend.
+
+Mais do que construir uma aplicação, o projeto representa uma jornada de aprendizado aplicando conceitos técnicos em um cenário próximo dos desafios encontrados na área de tecnologia.
